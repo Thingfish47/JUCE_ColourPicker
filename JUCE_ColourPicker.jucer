@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="cs8PTz" name="JUCE_ColourPicker" projectType="guiapp" jucerVersion="5.4.7">
+<JUCERPROJECT id="cs8PTz" name="JUCE_ColourPicker" projectType="guiapp" jucerFormatVersion="1">
   <MAINGROUP id="M8Ymt2" name="JUCE_ColourPicker">
     <GROUP id="{9DB30C8A-96EE-01F2-837C-49B5C694FD25}" name="Source">
       <FILE id="E9cb6U" name="ColourPicker.cpp" compile="1" resource="0"

@@ -1,5 +1,6 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2019
+# Visual Studio Version 16
 
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JUCE_ColourPicker - App", "JUCE_ColourPicker_App.vcxproj", "{675FA005-61A5-7B98-9055-83286675DB56}"
 EndProject
