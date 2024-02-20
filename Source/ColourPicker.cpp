@@ -262,9 +262,9 @@ void ColourPicker::NewTextButton(std::unique_ptr<TextButton>& bn, String /*Name*
 BEGIN_JUCER_METADATA
 
 <JUCER_COMPONENT documentType="Component" className="ColourPicker" componentName=""
-                 parentClasses="public Component" constructorParams="" variableInitialisers=""
-                 snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
-                 fixedSize="0" initialWidth="600" initialHeight="400">
+                 parentClasses="public Component, public Button::Listener" constructorParams=""
+                 variableInitialisers="" snapPixels="8" snapActive="1" snapShown="1"
+                 overlayOpacity="0.330" fixedSize="0" initialWidth="600" initialHeight="400">
   <BACKGROUND backgroundColour="ff323e44"/>
 </JUCER_COMPONENT>
 

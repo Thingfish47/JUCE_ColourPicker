@@ -36,7 +36,8 @@ using namespace std;
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class ColourPicker  : public Component, public Button::Listener
+class ColourPicker  : public Component,
+                      public Button::Listener
 {
 public:
     //==============================================================================
@@ -48,11 +49,11 @@ public:
 private:
     void NewTextButton(std::unique_ptr<TextButton>& up, String Name, Colour On, bool Sticky = false);
     void HandleButton(Colour);
+    void buttonClicked(Button* buttonThatWasClicked) override;
     //[/UserMethods]
 
     void paint (Graphics& g) override;
     void resized() override;
-    void buttonClicked(Button* buttonThatWasClicked) override;
 
 
 
