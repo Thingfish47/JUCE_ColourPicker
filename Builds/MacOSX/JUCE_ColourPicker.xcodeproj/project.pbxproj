@@ -19,6 +19,7 @@
 		6FA323B1E93C70523E513693 /* Main.cpp */ = {isa = PBXBuildFile; fileRef = 81654AED984892720BDE7814; };
 		7E3ED57C3E631C43BA9017C9 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = 7908307DED0614373AF95238; };
 		832BC995A4435948FDC466D1 /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = 1CCD344CCF34655CF99B2495; };
+		896A8158AA5F86DC20769176 /* BinaryData.cpp */ = {isa = PBXBuildFile; fileRef = AC4F7C53AD2638F4089E1ABE; };
 		A36333C302DC6D2364B2118C /* WebKit.framework */ = {isa = PBXBuildFile; fileRef = 0D7B8769B0ED1A29ECE9284B; };
 		B88E3BCF91208051DA22C56F /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = 1A573A3B5CDE28B82CA5D39E; };
 		C2207621183F783829CF0E5B /* include_juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = 4FB187BF48E7D1B03B9FDBA6; };
@@ -41,6 +42,7 @@
 		1A573A3B5CDE28B82CA5D39E /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1CCD344CCF34655CF99B2495 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 		1DEB7BC973F3F984656D433E /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
+		261BAC18D6018D5CC33641B5 /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
 		26801E09B6BDFD00F67D3BCE /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = "~/JUCE/modules/juce_graphics"; sourceTree = "<absolute>"; };
 		3D2017AE5AC48915BE034CBE /* ColourPicker.h */ /* ColourPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ColourPicker.h; path = ../../Source/ColourPicker.h; sourceTree = SOURCE_ROOT; };
 		3E4ABD7318DE8083D8CC78B1 /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = "~/JUCE/modules/juce_events"; sourceTree = "<absolute>"; };
@@ -57,7 +59,9 @@
 		8F5ECF723B1B093B0F1C59CF /* AppConfig.h */ /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppConfig.h; path = ../../JuceLibraryCode/AppConfig.h; sourceTree = SOURCE_ROOT; };
 		91361422594EC6F30682F09A /* App */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUCE_ColourPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99130472C839B1042C591085 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AC4F7C53AD2638F4089E1ABE /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
 		AD51EE01EE385A480E4640AF /* Info-App.plist */ /* Info-App.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-App.plist"; path = "Info-App.plist"; sourceTree = SOURCE_ROOT; };
+		C5EAB964F3A7A438D822ED1A /* ColourPicker.png */ /* ColourPicker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ColourPicker.png; path = ../../Resource/ColourPicker.png; sourceTree = SOURCE_ROOT; };
 		D573190C34C3A1FA6AE6BE45 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
 		D96CF43D631B710F1A15E0C6 /* juce_opengl */ /* juce_opengl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_opengl; path = "~/JUCE/modules/juce_opengl"; sourceTree = "<absolute>"; };
 		DD0F36D1445EA51197C3B910 /* juce_cryptography */ /* juce_cryptography */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_cryptography; path = "~/JUCE/modules/juce_cryptography"; sourceTree = "<absolute>"; };
@@ -86,10 +90,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234A43670503B516934063E3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C5EAB964F3A7A438D822ED1A,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		5181344EC221E931D5563A84 /* JUCE Library Code */ = {
 			isa = PBXGroup;
 			children = (
 				8F5ECF723B1B093B0F1C59CF,
+				AC4F7C53AD2638F4089E1ABE,
+				261BAC18D6018D5CC33641B5,
 				131892388A622F03551B4B65,
 				4935B4AD298F9BA7DB47E7A4,
 				E63E5B870E0F6A81E009F63E,
@@ -154,6 +168,7 @@
 		CB904BAF709BB7C57133224D /* JUCE_ColourPicker */ = {
 			isa = PBXGroup;
 			children = (
+				234A43670503B516934063E3,
 				6C558EA215F67DB7E6FE868A,
 			);
 			name = JUCE_ColourPicker;
@@ -270,6 +285,7 @@
 			files = (
 				5D990FA1CE91BEF61F84F8CE,
 				6FA323B1E93C70523E513693,
+				896A8158AA5F86DC20769176,
 				DDE2A186D645B7DD0237E1AF,
 				C45C4AEACA75068980FB5880,
 				D8E4E45ADEBBBDF5B48F6B12,

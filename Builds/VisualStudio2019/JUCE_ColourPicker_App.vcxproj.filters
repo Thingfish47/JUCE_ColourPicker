@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="JUCE_ColourPicker\Resource">
+      <UniqueIdentifier>{E9D2E346-5A56-2972-B54A-CDB8C3A11CDA}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JUCE_ColourPicker\Source">
       <UniqueIdentifier>{0CB0CE2A-3F88-6CAB-472A-0B32A053809B}</UniqueIdentifier>
     </Filter>
@@ -1756,6 +1759,9 @@
     <ClCompile Include="C:\JUCE\modules\juce_opengl\juce_opengl.mm">
       <Filter>JUCE Modules\juce_opengl</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_core.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
@@ -3357,11 +3363,17 @@
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h">
+      <Filter>JUCE Library Code</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Resource\ColourPicker.png">
+      <Filter>JUCE_ColourPicker\Resource</Filter>
+    </None>
     <None Include="C:\JUCE\modules\juce_core\native\java\README.txt">
       <Filter>JUCE Modules\juce_core\native\java</Filter>
     </None>
@@ -3370,6 +3382,9 @@
     </None>
     <None Include="C:\JUCE\modules\juce_graphics\image_formats\pnglib\libpng_readme.txt">
       <Filter>JUCE Modules\juce_graphics\image_formats\pnglib</Filter>
+    </None>
+    <None Include=".\icon.ico">
+      <Filter>JUCE Library Code</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

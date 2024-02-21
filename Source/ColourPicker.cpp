@@ -340,7 +340,7 @@ ColourPicker::ColourPicker ()
     //[UserPreSize]
     //[/UserPreSize]
 
-    //setSize (600, 400);
+    setSize (600, 400);
 
 
     //[Constructor] You can add your own custom stuff here..
@@ -369,7 +369,6 @@ void ColourPicker::paint (juce::Graphics& g)
     //[/UserPrePaint]
 
     g.fillAll (juce::Colour (0xff323e44));
-    //g.fillAll (filler);
 
     //[UserPaint] Add your own custom painting code here..
     auto full = getLocalBounds().reduced(4);
