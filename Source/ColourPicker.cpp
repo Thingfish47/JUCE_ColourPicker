@@ -24,6 +24,7 @@
 
 
 //[MiscUserDefs] You can add your own user definitions and misc code here...
+#define     INI_FILENAME    "LUCE_ColourPicker.ini"
 juce::Colour MyColours[] = {
     juce::Colours::aliceblue,
     juce::Colours::antiquewhite,
@@ -338,16 +339,16 @@ ColourPicker::ColourPicker ()
 
 
     //[UserPreSize]
+    int w, h;
+    LoadSize(w, h);
     //[/UserPreSize]
 
     setSize (600, 400);
 
 
     //[Constructor] You can add your own custom stuff here..
-    filler = juce::Colour(0xff323e44);
-    int     w, h;
-    LoadSize(w, h);
     setSize(w, h);
+    filler = juce::Colour(0xff323e44);
     //[/Constructor]
 }
 
@@ -452,7 +453,7 @@ void ColourPicker::SaveSize (int w, int h)
 {
     // Create a PropertiesFile object
     juce::PropertiesFile propertiesFile(juce::File::getSpecialLocation(juce::File::userApplicationDataDirectory)
-        .getChildFile("LUCE_ColourPicker.ini"), juce::PropertiesFile::Options());
+        .getChildFile(INI_FILENAME), juce::PropertiesFile::Options());
 
     // Set some key-value pairs
     propertiesFile.setValue("Width", w);
@@ -466,7 +467,7 @@ void ColourPicker::LoadSize(int& w, int& h)
 {
     // Create a PropertiesFile object
     juce::PropertiesFile propertiesFile(juce::File::getSpecialLocation(juce::File::userApplicationDataDirectory)
-        .getChildFile("LUCE_ColourPicker.ini"), juce::PropertiesFile::Options());
+        .getChildFile(INI_FILENAME), juce::PropertiesFile::Options());
 
     // Retrieve values by key
     h = propertiesFile.getIntValue("Height", 800);
